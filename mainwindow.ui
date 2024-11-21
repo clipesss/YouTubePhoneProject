@@ -165,7 +165,56 @@ background-color: rgb(40, 40, 40);
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_2"/>
+    <widget class="QWidget" name="page_2">
+     <property name="styleSheet">
+      <string notr="true">QWidget#page_2
+{
+background-color: rgb(33, 32, 32);
+}</string>
+     </property>
+     <widget class="QLabel" name="box2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>632</y>
+        <width>390</width>
+        <height>68</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel#box2
+{
+background-color: rgb(40, 40, 40);
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Plain</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="Line" name="line_3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>631</y>
+        <width>390</width>
+        <height>1</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(91, 90, 90);
+</string>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Orientation::Horizontal</enum>
+      </property>
+     </widget>
+    </widget>
    </widget>
   </widget>
  </widget>
