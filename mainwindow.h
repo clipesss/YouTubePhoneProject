@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QPushButton>
+#include <QVector>
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -16,8 +17,10 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
+private slots:
+    void startup();
 private:
     Ui::MainWindow *ui;
+    QVector<QPushButton*> buttons;
 };
 #endif // MAINWINDOW_H

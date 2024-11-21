@@ -6,22 +6,25 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    //Test buttons
-    QPushButton *button = new QPushButton(ui->scrollArea->widget());
-    button->setStyleSheet("background-color:red;");
-    button->setGeometry(0, 0, 390, 100);
-    button->update();
-
-    QPushButton *button2 = new QPushButton(ui->scrollArea->widget());
-    button2->setStyleSheet("background-color:green;");
-    button2->setGeometry(0, 100, 390, 100);
-    button2->update();
-
-    ui->scrollArea->widget()->setMinimumHeight(1000);
+    ui->scrollArea->widget()->setMinimumHeight(565);
     ui->scrollArea->setWidgetResizable(true);
+    startup();
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::startup()
+{
+    QLabel *picture1 = new QLabel(ui->scrollArea->widget());
+    picture1->setStyleSheet("background-color:red;");
+    picture1->setGeometry(0, 0, 390, 204);
+    picture1->update();
+
+    QLabel *picture2 = new QLabel(ui->scrollArea->widget());
+    picture2->setStyleSheet("background-color:green;");
+    picture2->setGeometry(0, 282, 390, 204);
+    picture2->update();
 }
