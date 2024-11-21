@@ -3,7 +3,13 @@
 
 #include <QMainWindow>
 #include <QPushButton>
+#include <QLabel>
 #include <QVector>
+#include <QtMultimedia/QtMultimedia>
+#include <QtMultimediaWidgets/QtMultimediaWidgets>
+#include <QtCore>
+#include <QtGui>
+#include <QtWidgets>
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -19,8 +25,10 @@ public:
     ~MainWindow();
 private slots:
     void startup();
+    void on_pushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
-    QVector<QPushButton*> buttons;
+    //QVector<QPushButton*> buttons;
 };
 #endif // MAINWINDOW_H
