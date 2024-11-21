@@ -6,7 +6,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    ui->scrollArea->widget()->setMinimumHeight(565);
+    ui->scrollArea->widget()->setMinimumHeight(2096);
     ui->scrollArea->setWidgetResizable(true);
     startup();
 }
@@ -21,12 +21,58 @@ void MainWindow::startup()
     QLabel *picture1 = new QLabel(ui->scrollArea->widget());
     picture1->setStyleSheet("background-color:red;");
     picture1->setGeometry(0, 0, 390, 204);
-    picture1->update();
+    QLabel *videoName1 = new QLabel(ui->scrollArea->widget());
+    videoName1->setText("Top 100 NBA Plays of 2021 🔥");
+    videoName1->setStyleSheet("QLabel{font: 12pt \"Segoe UI\";color: white;}");
+    videoName1->setGeometry(56,210,270,23);
 
     QLabel *picture2 = new QLabel(ui->scrollArea->widget());
     picture2->setStyleSheet("background-color:green;");
     picture2->setGeometry(0, 282, 390, 204);
-    picture2->update();
+    QLabel *videoName2 = new QLabel(ui->scrollArea->widget());
+    videoName2->setText("I've been training like LeBron James\nfor a week!");
+    videoName2->setStyleSheet("QLabel{font: 12pt \"Segoe UI\";color: white;}");
+    videoName2->setGeometry(56,492,290,45);
+
+    QLabel *picture3 = new QLabel(ui->scrollArea->widget());
+    picture3->setStyleSheet("background-color:yellow;");
+    picture3->setGeometry(0, 564, 390, 204);
+    QLabel *videoName3 = new QLabel(ui->scrollArea->widget());
+    videoName3->setText("Top 100 NBA Plays of 2021 🔥");
+    videoName3->setStyleSheet("QLabel{font: 12pt \"Segoe UI\";color: white;}");
+    videoName3->setGeometry(56,774,270,23);
+
+    QLabel *picture4 = new QLabel(ui->scrollArea->widget());
+    picture4->setStyleSheet("background-color:purple;");
+    picture4->setGeometry(0, 846, 390, 204);
+    QLabel *videoName4 = new QLabel(ui->scrollArea->widget());
+    videoName4->setText("Top 100 NBA Plays of 2021 🔥");
+    videoName4->setStyleSheet("QLabel{font: 12pt \"Segoe UI\";color: white;}");
+    videoName4->setGeometry(56,1056,270,23);
+
+    QLabel *picture5 = new QLabel(ui->scrollArea->widget());
+    picture5->setStyleSheet("background-color:white;");
+    picture5->setGeometry(0, 1128, 390, 204);
+    QLabel *videoName5 = new QLabel(ui->scrollArea->widget());
+    videoName5->setText("Top 100 NBA Plays of 2021 🔥");
+    videoName5->setStyleSheet("QLabel{font: 12pt \"Segoe UI\";color: white;}");
+    videoName5->setGeometry(56,1338,270,23);
+
+    QLabel *picture6 = new QLabel(ui->scrollArea->widget());
+    picture6->setStyleSheet("background-color:blue;");
+    picture6->setGeometry(0, 1410, 390, 204);
+    QLabel *videoName6 = new QLabel(ui->scrollArea->widget());
+    videoName6->setText("Top 100 NBA Plays of 2021 🔥");
+    videoName6->setStyleSheet("QLabel{font: 12pt \"Segoe UI\";color: white;}");
+    videoName6->setGeometry(56,1620,270,23);
+
+    QLabel *picture7 = new QLabel(ui->scrollArea->widget());
+    picture7->setStyleSheet("background-color:grey;");
+    picture7->setGeometry(0, 1692, 390, 204);
+    QLabel *videoName7 = new QLabel(ui->scrollArea->widget());
+    videoName7->setText("Top 100 NBA Plays of 2021 🔥");
+    videoName7->setStyleSheet("QLabel{font: 12pt \"Segoe UI\";color: white;}");
+    videoName7->setGeometry(56,1902,270,23);
 }
 
 void MainWindow::on_pushButton_clicked()
