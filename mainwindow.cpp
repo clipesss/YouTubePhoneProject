@@ -19,7 +19,7 @@ MainWindow::~MainWindow()
 void MainWindow::startup()
 {
     QLabel *picture1 = new QLabel(ui->scrollArea->widget());
-    picture1->setStyleSheet("background-color:red;");
+    picture1->setStyleSheet("background: url(:/resources/showVideo1.png);");
     picture1->setGeometry(0, 0, 390, 204);
     QLabel *videoName1 = new QLabel(ui->scrollArea->widget());
     videoName1->setText("Top 100 NBA Plays of 2021 🔥");
@@ -29,6 +29,23 @@ void MainWindow::startup()
     videoDescription1->setText("NBA · 7,6 млн просмотров · 2 года назад");
     videoDescription1->setStyleSheet("QLabel{font: 8pt \"Segoe UI\";color: grey;}");
     videoDescription1->setGeometry(56,230,270,23);
+    QPushButton *button1 = new QPushButton(ui->scrollArea->widget());
+    button1->setGeometry(0,0,390,253);
+    connect(button1, &QPushButton::clicked, this, [=]() {
+        QPixmap px_showPhoto(":/resources/showVideo1.png");
+        ui->label->setPixmap(px_showPhoto);
+
+        ui->stackedWidget->setCurrentIndex(1);
+
+        QString filename = "videos/video123.mp4";
+        QMediaPlayer* player = new QMediaPlayer(ui->page_2);
+        QVideoWidget* video = new QVideoWidget(ui->page_2);
+        video->setGeometry(0,0,390,204);
+        player->setVideoOutput(video);
+        player->setSource(QUrl::fromLocalFile(filename));
+        video->show();
+        player->play();
+    });
 
     QLabel *picture2 = new QLabel(ui->scrollArea->widget());
     picture2->setStyleSheet("background-color:green;");
@@ -78,33 +95,11 @@ void MainWindow::startup()
     videoDescription5->setStyleSheet("QLabel{font: 8pt \"Segoe UI\";color: grey;}");
     videoDescription5->setGeometry(56,1358,270,23);
 
-    QLabel *picture6 = new QLabel(ui->scrollArea->widget());
-    picture6->setStyleSheet("background-color:blue;");
-    picture6->setGeometry(0, 1410, 390, 204);
-    QLabel *videoName6 = new QLabel(ui->scrollArea->widget());
-    videoName6->setText("Top 100 NBA Plays of 2021 🔥");
-    videoName6->setStyleSheet("QLabel{font: 12pt \"Segoe UI\";color: white;}");
-    videoName6->setGeometry(56,1620,270,23);
 
-    QLabel *picture7 = new QLabel(ui->scrollArea->widget());
-    picture7->setStyleSheet("background-color:grey;");
-    picture7->setGeometry(0, 1692, 390, 204);
-    QLabel *videoName7 = new QLabel(ui->scrollArea->widget());
-    videoName7->setText("Top 100 NBA Plays of 2021 🔥");
-    videoName7->setStyleSheet("QLabel{font: 12pt \"Segoe UI\";color: white;}");
-    videoName7->setGeometry(56,1902,270,23);
 }
 
 void MainWindow::on_pushButton_clicked()
 {
-    QString filename = "videos/video123.mp4";
 
-    QMediaPlayer* player = new QMediaPlayer(ui->scrollArea->widget());
-    QVideoWidget* video = new QVideoWidget(ui->scrollArea->widget());
-    video->setGeometry(0,0,390,200);
-    player->setVideoOutput(video);
-    player->setSource(QUrl::fromLocalFile(filename));
-    video->show();
-    player->play();
 }
 
