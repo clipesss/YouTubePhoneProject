@@ -60,7 +60,7 @@ background-color: rgb(33, 32, 32);
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>631</y>
+        <y>636</y>
         <width>390</width>
         <height>1</height>
        </rect>
@@ -77,9 +77,9 @@ background-color: rgb(33, 32, 32);
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>632</y>
+        <y>639</y>
         <width>390</width>
-        <height>68</height>
+        <height>61</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -151,19 +151,6 @@ background-color: rgb(40, 40, 40);
        </property>
       </widget>
      </widget>
-     <widget class="QPushButton" name="pushButton">
-      <property name="geometry">
-       <rect>
-        <x>150</x>
-        <y>20</y>
-        <width>80</width>
-        <height>24</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>PushButton</string>
-      </property>
-     </widget>
     </widget>
     <widget class="QWidget" name="page_2">
      <property name="styleSheet">
@@ -176,9 +163,9 @@ background-color: rgb(33, 32, 32);
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>632</y>
+        <y>639</y>
         <width>390</width>
-        <height>68</height>
+        <height>61</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -201,7 +188,7 @@ background-color: rgb(40, 40, 40);
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>631</y>
+        <y>636</y>
         <width>390</width>
         <height>1</height>
        </rect>
@@ -214,7 +201,7 @@ background-color: rgb(40, 40, 40);
        <enum>Qt::Orientation::Horizontal</enum>
       </property>
      </widget>
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="VideoPhoto">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -227,10 +214,217 @@ background-color: rgb(40, 40, 40);
        <string/>
       </property>
      </widget>
+     <widget class="QLabel" name="VideoName">
+      <property name="geometry">
+       <rect>
+        <x>13</x>
+        <y>217</y>
+        <width>370</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel
+{
+font: 16pt &quot;Segoe UI&quot;;
+color: white;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Top 100 NBA Plays of 2021 🔥</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="VideoDescription">
+      <property name="geometry">
+       <rect>
+        <x>13</x>
+        <y>246</y>
+        <width>370</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel
+{
+font: 10pt &quot;Segoe UI&quot;;
+color: grey;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>7,6 млн просмотров 2 года назад</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="YouTubeLogo">
+      <property name="geometry">
+       <rect>
+        <x>13</x>
+        <y>274</y>
+        <width>33</width>
+        <height>33</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ChannelName">
+      <property name="geometry">
+       <rect>
+        <x>54</x>
+        <y>277</y>
+        <width>100</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel
+{
+font: 16pt &quot;Segoe UI&quot;;
+color: white;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>NBA</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>117</x>
+        <y>279</y>
+        <width>110</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/resources/LikeAndDisPlace.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="counterLikes">
+      <property name="geometry">
+       <rect>
+        <x>143</x>
+        <y>280</y>
+        <width>49</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel
+{
+font: 8pt &quot;Segoe UI&quot;;
+color: white;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>690 тыc.</string>
+      </property>
+     </widget>
     </widget>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>637</y>
+      <width>390</width>
+      <height>65</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resources.qrc">:/resources/BlockForButtons.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonHome">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>637</y>
+      <width>80</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+border-radius:20px;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonShorts">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>637</y>
+      <width>80</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+border-radius:20px;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonSettings">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>637</y>
+      <width>80</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+border-radius:20px;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonProfile">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>637</y>
+      <width>80</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+border-radius:20px;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
    </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

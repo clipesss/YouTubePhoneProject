@@ -1,5 +1,8 @@
 <RCC>
     <qresource prefix="/">
         <file>resources/showVideo1.png</file>
+        <file>resources/logoYoutube1.png</file>
+        <file>resources/LikeAndDisPlace.png</file>
+        <file>resources/BlockForButtons.png</file>
     </qresource>
 </RCC>

@@ -25,7 +25,7 @@ public:
     ~MainWindow();
 private slots:
     void startup();
-    void on_pushButton_clicked();
+    void on_buttonHome_clicked();
 
 private:
     Ui::MainWindow *ui;

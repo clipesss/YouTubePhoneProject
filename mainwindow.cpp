@@ -8,6 +8,11 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     ui->scrollArea->widget()->setMinimumHeight(2096);
     ui->scrollArea->setWidgetResizable(true);
+
+
+
+
+
     startup();
 }
 
@@ -29,15 +34,27 @@ void MainWindow::startup()
     videoDescription1->setText("NBA · 7,6 млн просмотров · 2 года назад");
     videoDescription1->setStyleSheet("QLabel{font: 8pt \"Segoe UI\";color: grey;}");
     videoDescription1->setGeometry(56,230,270,23);
+    QLabel *logoYoutube1 = new QLabel(ui->scrollArea->widget());
+    QPixmap pxLogoYt1(":/resources/logoYoutube1.png");
+    logoYoutube1->setPixmap(pxLogoYt1);
+    logoYoutube1->setGeometry(12,214,33,33);
     QPushButton *button1 = new QPushButton(ui->scrollArea->widget());
-    button1->setGeometry(0,0,390,253);
+    button1->setGeometry(0,0,390,255);
     connect(button1, &QPushButton::clicked, this, [=]() {
+
+        ui->VideoName->setText("Top 100 NBA Plays of 2021 🔥");
+        ui->VideoDescription->setText("NBA · 7,6 млн просмотров · 2 года назад");
+        ui->ChannelName->setText("NBA");
+        ui->counterLikes->setText("578 тыс.");
+        QPixmap pxLogoYT(":/resources/logoYoutube1.png");
+        ui->YouTubeLogo->setPixmap(pxLogoYT);
+
         QPixmap px_showPhoto(":/resources/showVideo1.png");
-        ui->label->setPixmap(px_showPhoto);
+        ui->VideoPhoto->setPixmap(px_showPhoto);
 
         ui->stackedWidget->setCurrentIndex(1);
-
-        QString filename = "videos/video123.mp4";
+        QTimer::singleShot(2000, [&]() {
+        QString filename = "videos/video1.mp4";
         QMediaPlayer* player = new QMediaPlayer(ui->page_2);
         QVideoWidget* video = new QVideoWidget(ui->page_2);
         video->setGeometry(0,0,390,204);
@@ -45,6 +62,7 @@ void MainWindow::startup()
         player->setSource(QUrl::fromLocalFile(filename));
         video->show();
         player->play();
+        });
     });
 
     QLabel *picture2 = new QLabel(ui->scrollArea->widget());
@@ -58,6 +76,37 @@ void MainWindow::startup()
     videoDescription2->setText("NBA · 7,6 млн просмотров · 2 года назад");
     videoDescription2->setStyleSheet("QLabel{font: 8pt \"Segoe UI\";color: grey;}");
     videoDescription2->setGeometry(56,531,270,23);
+    QLabel *logoYoutube2 = new QLabel(ui->scrollArea->widget());
+    QPixmap pxLogoYt2(":/resources/logoYoutube1.png");
+    logoYoutube2->setPixmap(pxLogoYt2);
+    logoYoutube2->setGeometry(12,496,33,33);
+    QPushButton *button2 = new QPushButton(ui->scrollArea->widget());
+    button2->setGeometry(0,282,390,260);
+    connect(button2, &QPushButton::clicked, this, [=]() {
+
+        ui->VideoName->setText("Top 100 NBA Plays of 2021 🔥");
+        ui->VideoDescription->setText("NBA · 7,6 млн просмотров · 2 года назад");
+        ui->ChannelName->setText("NBA");
+        ui->counterLikes->setText("578 тыс.");
+        QPixmap pxLogoYT(":/resources/logoYoutube1.png");
+        ui->YouTubeLogo->setPixmap(pxLogoYT);
+
+        QPixmap px_showPhoto(":/resources/showVideo1.png");
+        ui->VideoPhoto->setPixmap(px_showPhoto);
+
+        ui->stackedWidget->setCurrentIndex(1);
+        QTimer::singleShot(2000, [&]() {
+            QString filename = "videos/video1.mp4";
+            QMediaPlayer* player = new QMediaPlayer(ui->page_2);
+            QVideoWidget* video = new QVideoWidget(ui->page_2);
+            video->setGeometry(0,0,390,204);
+            player->setVideoOutput(video);
+            player->setSource(QUrl::fromLocalFile(filename));
+            video->show();
+            player->play();
+        });
+    });
+
 
     QLabel *picture3 = new QLabel(ui->scrollArea->widget());
     picture3->setStyleSheet("background-color:yellow;");
@@ -70,6 +119,38 @@ void MainWindow::startup()
     videoDescription3->setText("NBA · 7,6 млн просмотров · 2 года назад");
     videoDescription3->setStyleSheet("QLabel{font: 8pt \"Segoe UI\";color: grey;}");
     videoDescription3->setGeometry(56,794,270,23);
+    QLabel *logoYoutube3 = new QLabel(ui->scrollArea->widget());
+    QPixmap pxLogoYt3(":/resources/logoYoutube1.png");
+    logoYoutube3->setPixmap(pxLogoYt3);
+    logoYoutube3->setGeometry(12,778,33,33);
+    QPushButton *button3 = new QPushButton(ui->scrollArea->widget());
+    button3->setGeometry(0,564,390,253);
+    connect(button3, &QPushButton::clicked, this, [=]() {
+
+        ui->VideoName->setText("Top 100 NBA Plays of 2021 🔥");
+        ui->VideoDescription->setText("NBA · 7,6 млн просмотров · 2 года назад");
+        ui->ChannelName->setText("NBA");
+        ui->counterLikes->setText("578 тыс.");
+        QPixmap pxLogoYT(":/resources/logoYoutube1.png");
+        ui->YouTubeLogo->setPixmap(pxLogoYT);
+
+        QPixmap px_showPhoto(":/resources/showVideo1.png");
+        ui->VideoPhoto->setPixmap(px_showPhoto);
+
+        ui->stackedWidget->setCurrentIndex(1);
+        QTimer::singleShot(2000, [&]() {
+            QString filename = "videos/video1.mp4";
+            QMediaPlayer* player = new QMediaPlayer(ui->page_2);
+            QVideoWidget* video = new QVideoWidget(ui->page_2);
+            video->setGeometry(0,0,390,204);
+            player->setVideoOutput(video);
+            player->setSource(QUrl::fromLocalFile(filename));
+            video->show();
+            player->play();
+        });
+    });
+
+
 
     QLabel *picture4 = new QLabel(ui->scrollArea->widget());
     picture4->setStyleSheet("background-color:purple;");
@@ -82,6 +163,38 @@ void MainWindow::startup()
     videoDescription4->setText("NBA · 7,6 млн просмотров · 2 года назад");
     videoDescription4->setStyleSheet("QLabel{font: 8pt \"Segoe UI\";color: grey;}");
     videoDescription4->setGeometry(56,1076,270,23);
+    QLabel *logoYoutube4 = new QLabel(ui->scrollArea->widget());
+    QPixmap pxLogoYt4(":/resources/logoYoutube1.png");
+    logoYoutube4->setPixmap(pxLogoYt4);
+    logoYoutube4->setGeometry(12,1060,33,33);
+    QPushButton *button4 = new QPushButton(ui->scrollArea->widget());
+    button4->setGeometry(0,846,390,253);
+    connect(button4, &QPushButton::clicked, this, [=]() {
+
+        ui->VideoName->setText("Top 100 NBA Plays of 2021 🔥");
+        ui->VideoDescription->setText("NBA · 7,6 млн просмотров · 2 года назад");
+        ui->ChannelName->setText("NBA");
+        ui->counterLikes->setText("578 тыс.");
+        QPixmap pxLogoYT(":/resources/logoYoutube1.png");
+        ui->YouTubeLogo->setPixmap(pxLogoYT);
+
+        QPixmap px_showPhoto(":/resources/showVideo1.png");
+        ui->VideoPhoto->setPixmap(px_showPhoto);
+
+        ui->stackedWidget->setCurrentIndex(1);
+        QTimer::singleShot(2000, [&]() {
+            QString filename = "videos/video1.mp4";
+            QMediaPlayer* player = new QMediaPlayer(ui->page_2);
+            QVideoWidget* video = new QVideoWidget(ui->page_2);
+            video->setGeometry(0,0,390,204);
+            player->setVideoOutput(video);
+            player->setSource(QUrl::fromLocalFile(filename));
+            video->show();
+            player->play();
+        });
+    });
+
+
 
     QLabel *picture5 = new QLabel(ui->scrollArea->widget());
     picture5->setStyleSheet("background-color:white;");
@@ -94,12 +207,41 @@ void MainWindow::startup()
     videoDescription5->setText("NBA · 7,6 млн просмотров · 2 года назад");
     videoDescription5->setStyleSheet("QLabel{font: 8pt \"Segoe UI\";color: grey;}");
     videoDescription5->setGeometry(56,1358,270,23);
+    QLabel *logoYoutube5 = new QLabel(ui->scrollArea->widget());
+    QPixmap pxLogoYt5(":/resources/logoYoutube1.png");
+    logoYoutube5->setPixmap(pxLogoYt5);
+    logoYoutube5->setGeometry(12,1342,33,33);
+    QPushButton *button5 = new QPushButton(ui->scrollArea->widget());
+    button5->setGeometry(0,1128,390,253);
+    connect(button5, &QPushButton::clicked, this, [=]() {
 
+        ui->VideoName->setText("Top 100 NBA Plays of 2021 🔥");
+        ui->VideoDescription->setText("NBA · 7,6 млн просмотров · 2 года назад");
+        ui->ChannelName->setText("NBA");
+        ui->counterLikes->setText("578 тыс.");
+        QPixmap pxLogoYT(":/resources/logoYoutube1.png");
+        ui->YouTubeLogo->setPixmap(pxLogoYT);
+
+        QPixmap px_showPhoto(":/resources/showVideo1.png");
+        ui->VideoPhoto->setPixmap(px_showPhoto);
+
+        ui->stackedWidget->setCurrentIndex(1);
+        QTimer::singleShot(2000, [&]() {
+            QString filename = "videos/video1.mp4";
+            QMediaPlayer* player = new QMediaPlayer(ui->page_2);
+            QVideoWidget* video = new QVideoWidget(ui->page_2);
+            video->setGeometry(0,0,390,204);
+            player->setVideoOutput(video);
+            player->setSource(QUrl::fromLocalFile(filename));
+            video->show();
+            player->play();
+        });
+    });
 
 }
 
-void MainWindow::on_pushButton_clicked()
+void MainWindow::on_buttonHome_clicked()
 {
-
+    ui->stackedWidget->setCurrentIndex(0);
 }
 
