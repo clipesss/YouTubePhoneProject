@@ -245,3 +245,15 @@ void MainWindow::on_buttonHome_clicked()
     ui->stackedWidget->setCurrentIndex(0);
 }
 
+
+void MainWindow::on_buttonProfile_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
+}
+
+
+void MainWindow::on_pushButton_clicked()
+{
+    ui->email->setText(ui->lineEdit->text());
+}
+

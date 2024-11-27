@@ -27,6 +27,10 @@ private slots:
     void startup();
     void on_buttonHome_clicked();
 
+    void on_buttonProfile_clicked();
+
+    void on_pushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     //QVector<QPushButton*> buttons;
