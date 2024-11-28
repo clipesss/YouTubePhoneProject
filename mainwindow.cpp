@@ -41,7 +41,9 @@ void MainWindow::startup()
     QPushButton *button1 = new QPushButton(ui->scrollArea->widget());
     button1->setGeometry(0,0,390,255);
     connect(button1, &QPushButton::clicked, this, [=]() {
-
+        ui->email->hide();
+        ui->logo->hide();
+        ui->profileLogo->hide();
         ui->VideoName->setText("Top 100 NBA Plays of 2021 🔥");
         ui->VideoDescription->setText("NBA · 7,6 млн просмотров · 2 года назад");
         ui->ChannelName->setText("NBA");
@@ -52,7 +54,7 @@ void MainWindow::startup()
         QPixmap px_showPhoto(":/resources/showVideo1.png");
         ui->VideoPhoto->setPixmap(px_showPhoto);
 
-        ui->stackedWidget->setCurrentIndex(1);
+        ui->stackedWidget->setCurrentIndex(2);
         QTimer::singleShot(2000, [&]() {
         QString filename = "videos/video1.mp4";
         QMediaPlayer* player = new QMediaPlayer(ui->page_2);
@@ -83,7 +85,9 @@ void MainWindow::startup()
     QPushButton *button2 = new QPushButton(ui->scrollArea->widget());
     button2->setGeometry(0,282,390,260);
     connect(button2, &QPushButton::clicked, this, [=]() {
-
+        ui->email->hide();
+        ui->logo->hide();
+        ui->profileLogo->hide();
         ui->VideoName->setText("Top 100 NBA Plays of 2021 🔥");
         ui->VideoDescription->setText("NBA · 7,6 млн просмотров · 2 года назад");
         ui->ChannelName->setText("NBA");
@@ -94,7 +98,7 @@ void MainWindow::startup()
         QPixmap px_showPhoto(":/resources/showVideo1.png");
         ui->VideoPhoto->setPixmap(px_showPhoto);
 
-        ui->stackedWidget->setCurrentIndex(1);
+        ui->stackedWidget->setCurrentIndex(2);
         QTimer::singleShot(2000, [&]() {
             QString filename = "videos/video1.mp4";
             QMediaPlayer* player = new QMediaPlayer(ui->page_2);
@@ -126,7 +130,9 @@ void MainWindow::startup()
     QPushButton *button3 = new QPushButton(ui->scrollArea->widget());
     button3->setGeometry(0,564,390,253);
     connect(button3, &QPushButton::clicked, this, [=]() {
-
+        ui->email->hide();
+        ui->logo->hide();
+        ui->profileLogo->hide();
         ui->VideoName->setText("Top 100 NBA Plays of 2021 🔥");
         ui->VideoDescription->setText("NBA · 7,6 млн просмотров · 2 года назад");
         ui->ChannelName->setText("NBA");
@@ -137,7 +143,7 @@ void MainWindow::startup()
         QPixmap px_showPhoto(":/resources/showVideo1.png");
         ui->VideoPhoto->setPixmap(px_showPhoto);
 
-        ui->stackedWidget->setCurrentIndex(1);
+        ui->stackedWidget->setCurrentIndex(2);
         QTimer::singleShot(2000, [&]() {
             QString filename = "videos/video1.mp4";
             QMediaPlayer* player = new QMediaPlayer(ui->page_2);
@@ -170,7 +176,9 @@ void MainWindow::startup()
     QPushButton *button4 = new QPushButton(ui->scrollArea->widget());
     button4->setGeometry(0,846,390,253);
     connect(button4, &QPushButton::clicked, this, [=]() {
-
+        ui->email->hide();
+        ui->logo->hide();
+        ui->profileLogo->hide();
         ui->VideoName->setText("Top 100 NBA Plays of 2021 🔥");
         ui->VideoDescription->setText("NBA · 7,6 млн просмотров · 2 года назад");
         ui->ChannelName->setText("NBA");
@@ -181,7 +189,7 @@ void MainWindow::startup()
         QPixmap px_showPhoto(":/resources/showVideo1.png");
         ui->VideoPhoto->setPixmap(px_showPhoto);
 
-        ui->stackedWidget->setCurrentIndex(1);
+        ui->stackedWidget->setCurrentIndex(2);
         QTimer::singleShot(2000, [&]() {
             QString filename = "videos/video1.mp4";
             QMediaPlayer* player = new QMediaPlayer(ui->page_2);
@@ -214,7 +222,9 @@ void MainWindow::startup()
     QPushButton *button5 = new QPushButton(ui->scrollArea->widget());
     button5->setGeometry(0,1128,390,253);
     connect(button5, &QPushButton::clicked, this, [=]() {
-
+        ui->email->hide();
+        ui->logo->hide();
+        ui->profileLogo->hide();
         ui->VideoName->setText("Top 100 NBA Plays of 2021 🔥");
         ui->VideoDescription->setText("NBA · 7,6 млн просмотров · 2 года назад");
         ui->ChannelName->setText("NBA");
@@ -225,7 +235,7 @@ void MainWindow::startup()
         QPixmap px_showPhoto(":/resources/showVideo1.png");
         ui->VideoPhoto->setPixmap(px_showPhoto);
 
-        ui->stackedWidget->setCurrentIndex(1);
+        ui->stackedWidget->setCurrentIndex(2);
         QTimer::singleShot(2000, [&]() {
             QString filename = "videos/video1.mp4";
             QMediaPlayer* player = new QMediaPlayer(ui->page_2);
@@ -242,18 +252,27 @@ void MainWindow::startup()
 
 void MainWindow::on_buttonHome_clicked()
 {
+    ui->email->show();
+    ui->logo->show();
+    ui->profileLogo->show();
     ui->stackedWidget->setCurrentIndex(0);
 }
 
 
 void MainWindow::on_buttonProfile_clicked()
 {
+    ui->email->show();
+    ui->logo->show();
+    ui->profileLogo->show();
     ui->stackedWidget->setCurrentIndex(1);
 }
 
 
 void MainWindow::on_pushButton_clicked()
 {
+    ui->email->show();
+    ui->logo->show();
+    ui->profileLogo->show();
     ui->email->setText(ui->lineEdit->text());
 }
 

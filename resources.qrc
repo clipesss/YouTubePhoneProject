@@ -4,5 +4,7 @@
         <file>resources/logoYoutube1.png</file>
         <file>resources/LikeAndDisPlace.png</file>
         <file>resources/BlockForButtons.png</file>
+        <file>resources/profileLogo.png</file>
+        <file>resources/PYLogo.png</file>
     </qresource>
 </RCC>
